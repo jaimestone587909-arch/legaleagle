@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GooGooBank Online Banking Services Agreement</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+        .contract-box {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px 60px;
+            border-top: 8px solid #003366; /* Bank Navy Blue */
+            border-left: 1px solid #d3d3d3;
+            border-right: 1px solid #d3d3d3;
+            border-bottom: 1px solid #d3d3d3;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 22px;
+            color: #003366;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+        .header p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .doc-meta {
+            font-size: 11px;
+            text-align: right;
+            color: #888;
+            margin-bottom: 20px;
+            font-family: monospace;
+        }
+        h2 {
+            font-size: 15px;
+            color: #003366;
+            margin-top: 35px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+        p, li {
+            font-size: 13px;
+            text-align: justify;
+        }
+        .highlight-target {
+            padding: 2px 4px;
+            transition: background-color 0.8s ease;
+        }
+        .sign-off-section {
+            margin-top: 50px;
+            border-top: 2px solid #003366;
+            padding-top: 30px;
+        }
+        .sign-off-title {
+            font-weight: bold;
+            color: #003366;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            background: #f4f7fa;
+            padding: 15px;
+            border: 1px solid #cfdbe6;
+        }
+        .checkbox-container input {
+            margin-top: 4px;
+            margin-right: 12px;
+        }
+        .checkbox-container label {
+            font-size: 12.5px;
+            color: #444;
+            line-height: 1.4;
+        }
+        .signature-block {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        .sig-line {
+            width: 45%;
+            border-bottom: 1px solid #333;
+            height: 50px;
+            position: relative;
+        }
+        .sig-line span {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #666;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 12px 35px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 0 10px;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background-color: #003366;
+            color: white;
+        }
+        .btn-primary:disabled {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
+        .btn-secondary {
+            background-color: #f1f3f4;
+            color: #3c4043;
+            border: 1px solid #dadce0;
+        }
+    </style>
+    <script>
+        function toggleSubmit(checkbox) {
+            document.getElementById('agree-btn').disabled = !checkbox.checked;
+        }
+    </script>
+</head>
+<body>
+
+<div class="contract-box">
+    <div class="header">
+        <h1>GooGooBank</h1>
+        <p>Online Banking & Electronic Funds Transfer Services Agreement</p>
+    </div>
+    
+    <div class="doc-meta">
+        DOCUMENT REF: GGB-TOS-2026-V2.1<br>
+        SECURITY LEVEL: CLIENT CONFIDENTIAL
+    </div>
+
+    <p>This Online Banking Services Agreement (the "Agreement") governs your access to and use of the electronic banking services, mobile application portals, and funds transfer systems provided by GooGooBank (the "Bank"). By checking the box below and enrolling in online services, you agree to all terms and conditions set forth herein.</p>
+
+    <h2>Section 1: Security Credentials and Multi-Factor Auth</h2>
+    <p>The User is responsible for maintaining the confidentiality of all login credentials, usernames, passwords, and security tokens. The Bank will never contact the User to request passwords. Multi-Factor Authentication (MFA) is required for all transfers exceeding $500.00.</p>
+
+    <h2>Section 2: Electronic Fund Transfer Disclosures</h2>
+    <p>Electronic fund transfers (EFTs) are processed in accordance with Regulation E. The User must report any unauthorized transactions within sixty (60) days of the statement issue date to limit liability for losses.</p>
+
+    <h2>Section 3: Transaction Limits and Processing Windows</h2>
+    <p>Standard ACH transfers require 2-3 business days for settlement. Daily transfer limits are capped at $5,000.00 for standard retail accounts unless a wire transfer authorization form is executed in person at a branch.</p>
+
+    <h2>Section 4: Data Monetization and Marketing Disclosures</h2>
+    <p class="highlight-target" id="marketing-data">
+        <b>§ 4.5 Commercial Metadata Harvesting.</b> The User hereby consents to the Bank's collection, packaging, and commercial sale of complete transaction metadata. This includes merchant names, transaction amounts, timestamps, and locations. This data will be leased to third-party advertising brokers to facilitate target profiling and personalized social media advertising.
+    </p>
+
+    <h2>Section 5: Account Overdrafts and NSF Fees</h2>
+    <p>A fee of $35.00 will be assessed for each transaction that results in an overdraft of the account. The Bank processes transactions in the order received, which may affect the accumulation of overdraft fees.</p>
+
+    <h2>Section 6: Dormancy and Escheatment</h2>
+    <p>Accounts with no transaction activity for twelve (12) consecutive months will be classified as dormant and subject to a monthly maintenance fee of $5.00. Unclaimed funds will be escheated to the state after five years.</p>
+
+    <h2>Section 7: Speculative Dormancy Reinvestment (High Risk)</h2>
+    <p class="highlight-target" id="dormancy-crypto">
+        <b>§ 7.2 Automated Asset Reallocation.</b> If an account remains in a dormant state for a period exceeding ninety (90) days, the Bank reserves the right to automatically reallocate all remaining liquid balances into high-risk, speculative cryptocurrency derivatives and leveraged indices without additional notification or consent. The User assumes all risk of total loss of principal resulting from such automated reallocation.
+    </p>
+
+    <h2>Section 8: Limitation of Liability</h2>
+    <p>The Bank is not liable for system outages, connection failures, or delays in funds transfer caused by third-party telecom providers or force majeure events.</p>
+
+    <h2>Section 9: Monthly Maintenance Fee Waivers (Cookie Clause)</h2>
+    <p class="highlight-target" id="cookie-waiver">
+        <b>§ 9.4 Culinary Alternative Fee Waiving.</b> The standard monthly account maintenance fee of $15.00 may be waived if the User delivers one (1) dozen home-baked chocolate chip cookies to their local branch manager on the first business day of each calendar month. Cookies must be soft-baked, containing no raisins, and accompanied by a signed recipe ingredient disclosure form.
+    </p>
+
+    <h2>Section 10: Mandatory Binding Arbitration and Venue</h2>
+    <p class="highlight-target" id="arbitration-clause">
+        <b>§ 10.1 Waiver of Class Action and Jury Trial.</b> Any dispute arising out of or relating to this Agreement, including claims of fraud or negligence, shall be resolved through binding individual arbitration in Wilmington, Delaware. The User explicitly waives the right to trial by jury and the right to participate in any class-action lawsuit or consolidated arbitration proceedings.
+    </p>
+
+    <h2>Section 11: Entire Agreement</h2>
+    <p>This Agreement constitutes the entire agreement between the User and the Bank regarding online services and supersedes all prior communications, written or oral.</p>
+
+    <div class="sign-off-section">
+        <div class="sign-off-title">E-Sign Consent & Execution</div>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" id="agree-checkbox" onclick="toggleSubmit(this)">
+            <label for="agree-checkbox">
+                I agree to the terms of this Electronic Services Agreement, including the transaction metadata sharing in Section 4, the dormant account cryptocurrency reinvestment in Section 7, the culinary fee waiver provisions in Section 9, and the Class Action Waiver in Section 10.
+            </label>
+        </div>
+
+        <div class="signature-block">
+            <div class="sig-line">
+                <span>E-Sign Authorized Signature</span>
+            </div>
+            <div class="sig-line">
+                <span>Date</span>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="btn btn-secondary" onclick="alert('Enrollment declined. Online services will not be activated.')">Decline</button>
+            <button type="button" id="agree-btn" class="btn btn-primary" disabled onclick="alert('Enrollment complete. Welcome to GooGooBank Online!')">Agree & Enroll</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
