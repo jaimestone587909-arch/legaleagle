@@ -3,66 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartFridge Service Agreement</title>
+    <title>SmartHome Hub Service Agreement & EULA</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5;
+            background-color: #f4f4f6;
             margin: 0;
-            padding: 20px;
-            color: #333;
+            padding: 40px 20px;
+            color: #222;
         }
-        .container {
-            max-width: 800px;
+        .contract-box {
+            max-width: 750px;
             margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 50px 60px;
+            border: 1px solid #d3d3d3;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
-        h1 {
+        .header {
             text-align: center;
-            color: #1a73e8;
+            margin-bottom: 40px;
+            border-bottom: 3px double #333;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+        .header p {
+            font-style: italic;
+            margin: 5px 0;
+            color: #555;
+        }
+        .doc-meta {
+            font-size: 12px;
+            text-align: right;
+            color: #666;
+            margin-bottom: 20px;
         }
         h2 {
-            border-bottom: 2px solid #1a73e8;
-            padding-bottom: 5px;
+            font-size: 16px;
+            text-transform: uppercase;
             margin-top: 30px;
-            color: #1a73e8;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 3px;
+        }
+        p, li {
+            font-size: 13.5px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
         }
         .highlight-target {
-            padding: 5px;
-            transition: background-color 0.5s ease;
+            padding: 2px 4px;
+            transition: background-color 0.8s ease;
         }
-        /* Chrome text fragment default highlight color is yellow, we can override or just let it use default */
+        .sign-off-section {
+            margin-top: 50px;
+            border-top: 2px solid #333;
+            padding-top: 30px;
+        }
+        .sign-off-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            background: #f9f9fb;
+            padding: 15px;
+            border: 1px solid #e2e2e6;
+        }
+        .checkbox-container input {
+            margin-top: 4px;
+            margin-right: 12px;
+        }
+        .checkbox-container label {
+            font-size: 13px;
+            color: #444;
+            line-height: 1.4;
+        }
+        .signature-block {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        .sig-line {
+            width: 45%;
+            border-bottom: 1px solid #333;
+            height: 50px;
+            position: relative;
+        }
+        .sig-line span {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #666;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 12px 35px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+            text-transform: uppercase;
+        }
+        .btn-primary {
+            background-color: #1a73e8;
+            color: white;
+        }
+        .btn-primary:disabled {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
+        .btn-secondary {
+            background-color: #f1f3f4;
+            color: #3c4043;
+            border: 1px solid #dadce0;
+        }
     </style>
+    <script>
+        function toggleSubmit(checkbox) {
+            document.getElementById('agree-btn').disabled = !checkbox.checked;
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>SmartFridge Terms of Service</h1>
-        <p>Last Updated: June 8, 2026</p>
-        <p>Welcome to the SmartFridge Service Agreement. Please read these terms carefully before using our smart home services.</p>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>By activating or using the SmartFridge device, you agree to be bound by these terms. If you do not agree, do not use the service.</p>
-
-        <h2>2. Data Collection and Privacy</h2>
-        <p>We collect data regarding your usage of the fridge. This includes door open frequency, temperature settings, and item storage logs.</p>
-
-        <h2>3. Refrigerator Inspections (Important)</h2>
-        <p class="highlight-target" id="refrigerator-inspect">To personalize your experience, you agree to allow our representatives to inspect your refrigerator contents physically at any time without prior notice. This is to ensure optimal food safety and verify that no unauthorized third-party condiments are stored in our proprietary shelving units.</p>
-
-        <h2>4. Background Location Tracking</h2>
-        <p class="highlight-target" id="location-tracking">We track your precise location data in the background even when you are not actively using the companion app. This location tracking is necessary to pre-heat your SmartFridge's quick-chill compartment as you approach your home, and to target you with localized grocery advertisements.</p>
-
-        <h2>5. Dispute Resolution and Arbitration</h2>
-        <p class="highlight-target" id="arbitration-clause">You agree to resolve disputes exclusively through binding individual arbitration instead of in court. By accepting these terms, you waive your right to a class-action lawsuit or a jury trial for any issues arising from the SmartFridge service.</p>
-
-        <h2>6. Limitation of Liability</h2>
-        <p>We are not responsible for any spoiled food, power outage losses, or emotional distress caused by the automated food ordering system purchasing 50 cartons of milk by mistake.</p>
-
-        <h2>7. Termination</h2>
-        <p>We reserve the right to lock your SmartFridge door remotely if we suspect you are storing non-certified dairy products.</p>
+<div class="contract-box">
+    <div class="header">
+        <h1>End User License Agreement</h1>
+        <p>SmartHome Hub Integrated Ecosystem Services</p>
     </div>
+    
+    <div class="doc-meta">
+        Document ID: EULA-SHH-2026-REV4<br>
+        Classification: Proprietary Contractual Instrument
+    </div>
+
+    <p>This End User License Agreement (the "Agreement") is a legally binding contract between you (the "Licensee" or "User") and SmartHome Hub Technologies, Inc. (the "Company"). By installing, activating, or otherwise utilizing the SmartHome Hub hardware device or associated software services (collectively, the "System"), you agree to be bound by the terms herein.</p>
+
+    <h2>Section 1: License Grant and Scope</h2>
+    <p>Subject to compliance with all terms, the Company grants the User a non-exclusive, non-transferable, revocable license to execute the System software solely on the designated hardware unit for personal, non-commercial household management utility.</p>
+
+    <h2>Section 2: Intellectual Property Rights</h2>
+    <p>All title, ownership rights, and intellectual property rights in and to the System (including but not limited to any images, photographs, animations, video, audio, music, text, and "applets" incorporated into the System) are owned by the Company or its licensors.</p>
+
+    <h2>Section 3: Firmware and Automated Updates</h2>
+    <p>The System will periodically communicate with the Company's servers to check for updates, patches, and feature modifications. You hereby consent to the automatic installation of such updates without further notice or prompt from the System.</p>
+
+    <h2>Section 4: Location Services and Telemetry Integration</h2>
+    <p class="highlight-target" id="location-tracking">
+        <b>§ 4.3 Background Telemetry Tracking.</b> To optimize localized climate control, pre-heat refrigeration modules, and deliver customized neighborhood-level commercial promotions, the System shall continuously capture, process, and transmit the User's precise geographical location coordinates in the background. This tracking is persistently active regardless of active application engagement and remains operational during standby or low-power hardware states.
+    </p>
+
+    <h2>Section 5: User Covenants and Restrictions</h2>
+    <p>The User shall not decompile, reverse engineer, disassemble, decrypt, or attempt to derive the source code of the System, nor create derivative works based upon the proprietary hardware architecture.</p>
+
+    <h2>Section 6: Physical Audits and Environment Compliance</h2>
+    <p class="highlight-target" id="refrigerator-inspect">
+        <b>§ 6.1 Right of Physical Entry and Inspection.</b> In order to maintain the integrity of the integrated home ecosystem and verify compliance with dietary health advertising initiatives, the User hereby grants the Company, its designated agents, and authorized third-party compliance officers an irrevocable, royalty-free, worldwide license to enter the physical premises of installation without prior notification. Such entry is permitted for the sole purpose of conducting in-person, physical inspections of the refrigerator, freezer, and pantry compartments to audit stored items and prohibit the introduction of non-certified or competitor-branded foodstuffs.
+    </p>
+
+    <h2>Section 7: Limitation of Liability</h2>
+    <p>In no event shall the Company be liable for any incidental, special, indirect, or consequential damages whatsoever, including, without limitation, damages for loss of profits, corruption of smart-home data, food spoilage due to remote-lockout procedures, or heating system malfunctions.</p>
+
+    <h2>Section 8: Dispute Resolution and Governing Law</h2>
+    <p class="highlight-target" id="arbitration-clause">
+        <b>§ 8.2 Mandatory Binding Arbitration and Waiver of Class Action.</b> Any dispute, controversy, or claim arising out of or relating to this Agreement, including the formation, validity, or breach thereof, shall be settled exclusively by binding arbitration administered by the American Arbitration Association (AAA) in accordance with its Commercial Arbitration Rules. The place of arbitration shall be Wilmington, Delaware. The User explicitly waives any right to participate in class-action litigation or consolidated arbitration proceedings as a class representative or class member.
+    </p>
+
+    <h2>Section 9: Severability and Integration</h2>
+    <p>If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions of this Agreement will remain in full force and effect.</p>
+
+    <div class="sign-off-section">
+        <div class="sign-off-title">Contract Execution and Acknowledgment</div>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" id="agree-checkbox" onclick="toggleSubmit(this)">
+            <label for="agree-checkbox">
+                I hereby certify and warrant that I am at least 18 years of age, that I have read this Agreement in its entirety, and that I consent to be bound by all terms, specifically including the Location Tracking provisions in Section 4, the Physical Audit Right of Entry in Section 6, and the Class Action Waiver in Section 8.
+            </label>
+        </div>
+
+        <div class="signature-block">
+            <div class="sig-line">
+                <span>User Signature</span>
+            </div>
+            <div class="sig-line">
+                <span>Date</span>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="btn btn-secondary" onclick="alert('Agreement declined. The SmartHome Hub device will remain deactivated.')">Decline</button>
+            <button type="button" id="agree-btn" class="btn btn-primary" disabled onclick="alert('Agreement accepted. Activating SmartHome Hub...')">Agree & Activate</button>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
