@@ -3,253 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GooGooBank Online Banking Services Agreement</title>
+    <title>GooGooBank Account Terms of Use</title>
     <style>
         body {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.5;
-            background-color: #f4f4f6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
             margin: 0;
-            padding: 40px 20px;
-            color: #222;
+            padding: 0;
+            color: #202124;
         }
-        .contract-box {
-            max-width: 750px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 50px 60px;
-            border: 1px solid #d3d3d3;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        .header {
+        .header-bar {
+            background-color: #0c2b4a;
+            color: white;
             text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 3px double #003366; /* Navy Double Line */
-            padding-bottom: 20px;
+            padding: 16px;
+            font-size: 20px;
+            font-weight: bold;
         }
-        .header h1 {
-            font-size: 24px;
-            color: #003366;
-            margin: 0 0 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .stepper {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #dadce0;
         }
-        .header p {
-            font-style: italic;
-            margin: 5px 0;
-            color: #555;
+        .step-item {
+            font-size: 13px;
+            color: #70757a;
+            flex: 1;
+            text-align: center;
+            padding-bottom: 8px;
+            border-bottom: 2px solid transparent;
+        }
+        .step-item.active {
+            color: #1a73e8;
+            font-weight: bold;
+            border-bottom: 2px solid #1a73e8;
+        }
+        .step-item.completed {
+            color: #70757a;
+        }
+        .container {
+            padding: 24px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 22px;
+            color: #0c2b4a;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+        .intro-text {
             font-size: 14px;
-        }
-        .doc-meta {
-            font-size: 12px;
-            text-align: right;
-            color: #666;
-            margin-bottom: 20px;
+            color: #5f6368;
+            margin-bottom: 30px;
+            line-height: 1.4;
         }
         h2 {
             font-size: 16px;
-            color: #003366;
-            margin-top: 35px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 3px;
-            text-transform: uppercase;
-        }
-        p, li {
-            font-size: 13.5px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-        .highlight-target {
-            padding: 2px 4px;
-            transition: background-color 0.8s ease;
-        }
-        .sign-off-section {
-            margin-top: 50px;
-            border-top: 2px solid #003366;
-            padding-top: 30px;
-        }
-        .sign-off-title {
+            color: #202124;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #f1f3f4;
+            padding-bottom: 6px;
             font-weight: bold;
-            color: #003366;
-            text-transform: uppercase;
+        }
+        p {
             font-size: 14px;
-            margin-bottom: 20px;
-            text-align: center;
+            line-height: 1.6;
+            color: #3c4043;
+            margin-bottom: 16px;
+            text-align: justify;
         }
         .checkbox-container {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
-            background: #f4f7fa;
-            padding: 15px;
-            border: 1px solid #cfdbe6;
+            margin-top: 32px;
+            margin-bottom: 24px;
         }
         .checkbox-container input {
-            margin-top: 4px;
+            margin-top: 3px;
             margin-right: 12px;
         }
         .checkbox-container label {
             font-size: 13px;
-            color: #444;
-            line-height: 1.4;
+            color: #3c4043;
+            line-height: 1.5;
         }
-        .signature-block {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
-        .sig-line {
-            width: 45%;
-            border-bottom: 1px solid #333;
-            height: 50px;
-            position: relative;
-        }
-        .sig-line span {
-            position: absolute;
-            bottom: -20px;
-            left: 0;
-            font-size: 11px;
-            text-transform: uppercase;
-            color: #666;
-        }
-        .button-group {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .btn {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 12px 35px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin: 0 10px;
-            text-transform: uppercase;
-        }
-        .btn-primary {
-            background-color: #003366;
+        .submit-btn {
+            width: 100%;
+            background-color: #d93025;
             color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
         }
-        .btn-primary:disabled {
-            background-color: #cccccc;
-            color: #666666;
+        .submit-btn:disabled {
+            background-color: #f1f3f4;
+            color: #c4c7c5;
             cursor: not-allowed;
         }
-        .btn-secondary {
-            background-color: #f1f3f4;
-            color: #3c4043;
-            border: 1px solid #dadce0;
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #70757a;
+            margin-top: 40px;
+            padding-bottom: 30px;
         }
     </style>
     <script>
         function toggleSubmit(checkbox) {
-            document.getElementById('agree-btn').disabled = !checkbox.checked;
+            document.getElementById('submit-btn').disabled = !checkbox.checked;
         }
     </script>
 </head>
 <body>
 
-<div class="contract-box">
-    <div class="header">
-        <h1>GooGooBank</h1>
-        <p>Online Banking & Electronic Funds Transfer Services Agreement</p>
-    </div>
+<div class="header-bar">
+    GooGooBank Online
+</div>
+<div class="stepper">
+    <div class="step-item completed">1. Personal Info</div>
+    <div class="step-item completed">2. Identification</div>
+    <div class="step-item active">3. Terms & Consent</div>
+    <div class="step-item">4. Complete</div>
+</div>
 
-    <!-- Device Registration Metadata Table -->
-    <div class="registration-form-header">
-        <table style="width:100%; border-collapse: collapse; margin-bottom: 25px; font-size: 13px; font-family: monospace; border: 1px solid #d3d3d3;">
-            <tr style="border-bottom: 1px solid #d3d3d3; background-color: #f9f9f9;">
-                <td style="padding: 8px; font-weight: bold; width: 30%;">Service Portal:</td>
-                <td style="padding: 8px; width: 70%;">GooGooBank Online Access (v4.2)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #d3d3d3;">
-                <td style="padding: 8px; font-weight: bold;">Account Class:</td>
-                <td style="padding: 8px;">Standard Retail Checking & Savings</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #d3d3d3; background-color: #f9f9f9;">
-                <td style="padding: 8px; font-weight: bold;">Applicant LDAP:</td>
-                <td style="padding: 8px;">wellyhsu@google.com</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; font-weight: bold;">Enrollment Date:</td>
-                <td style="padding: 8px;">June 8, 2026</td>
-            </tr>
-        </table>
-    </div>
+<div class="container">
+    <h1>GooGooBank Account Terms of Use</h1>
+    <p class="intro-text">Please scroll through and read the Data Collection & Usage Agreement below before submitting your application.</p>
     
-    <div class="doc-meta">
-        DOCUMENT REF: GGB-TOS-2026-V2.1<br>
-        SECURITY LEVEL: CLIENT CONFIDENTIAL
+    <h2>Our Vision & Corporate Promise</h2>
+    <p>At GooGooBank, we are profoundly dedicated to synergizing next-generation financial architectures with cutting-edge cloud solutions, driving holistic global prosperity and enabling frictionless digital economic participation. Our foundational core mission pivots on delivering robust, secure, and hyper-personalized banking ecosystems that seamlessly unlock capital efficiency and elevate wealth curation paradigms. Through our relentlessly forward-looking strategic partnerships, advanced automated compliance structures, and customer-centric technological investments, we continuously strive to synthesize deep liquidity pools with state-of-the-art asset security frameworks, cementing our pledge to serve as a reliable, high-performance guardian of your financial destiny. We believe that by empowering every individual with state-of-the-art payment rails, institutional-grade portfolio diversification opportunities, and real-time transactional transparency, we can usher in an era of unparalleled economic inclusion, technological enablement, and sustainable global wealth optimization for generations to come.</p>
+    <p>To further accelerate this vision, our engineering and regulatory teams collaborate across international boundaries to guarantee that our systemic operations exceed global compliance benchmarks, integrating seamlessly with industry-leading security protocols to maintain an ironclad barrier against fraudulent activities. As you embark on your wealth-building journey with our flagship GooGooGold Checking Account, you are not merely establishing a standard banking relationship—you are onboarding onto a state-of-the-art sovereign banking engine engineered to optimize your fiscal velocity and redefine how you manage your personal legacy.</p>
+
+    <h2>1. Agreement Overview</h2>
+    <p>This Agreement outlines the terms under which GooGooBank collects, processes, and protects your financial and personal data during the account opening process and subsequent banking relationship. By submitting your application, you accept these terms in full.</p>
+
+    <h2>2. Fraud Prevention & Security Tracking</h2>
+    <p>GooGooBank employs advanced security measures to protect your assets and identity. You agree that we may monitor transactional behavior, device metadata, and network routing to detect suspicious activity.</p>
+    <p>Specifically, to prevent transaction fraud and verify your billing address, you agree that we may continuously track your precise location data in the background, even when the application is closed, inactive, or not in use. This background location tracking will monitor your geographic movements to detect unauthorized logins from anomalous coordinates.</p>
+
+    <h2>3. Account Maintenance & Fees</h2>
+    <p>Your GooGooGold Checking Account is subject to standard monthly maintenance fees as outlined in our Fee Schedule. These fees will be automatically deducted from your balance on the first business day of each calendar month.</p>
+    <p>These subscription fees will automatically renew every month. If you wish to opt-out of the automatic renewal and close your account without penalty, you must submit a notarized written request to our regional headquarters within a strictly limited 14-day opt-out window starting from today's date.</p>
+
+    <h2>4. Rights and Dispute Resolution</h2>
+    <p>Any dispute or claim arising out of or relating to your account, online banking access, or this Agreement shall be governed by federal regulations and state financial codes.</p>
+    <p>By opening this account, you agree that any disputes arising from the use of this application or banking services will be resolved exclusively through binding individual arbitration. You hereby waive your right to participate in any class-action lawsuits or class-wide arbitration proceedings against GooGooBank.</p>
+
+    <h2>5. Marketing & Partner Ecosystem</h2>
+    <p>GooGooBank coordinates with selected premium financial partners to offer tailored insurance, investment, and loan products that may benefit your financial portfolio.</p>
+    <p>To facilitate these personalized offers, we reserve the right to sell, share, or otherwise monetize your personal profile details, transaction logs, financial habits, and tracked location history with third-party advertisers, marketing brokers, and credit rating agencies without further explicit consent.</p>
+
+    <h2>6. Service Termination</h2>
+    <p>GooGooBank reserves the right to suspend, restrict, or terminate your online banking privileges and account access at any time, without prior notice or liability, for any compliance or regulatory reason, including but not limited to a breach of this Agreement.</p>
+
+    <div class="checkbox-container">
+        <input type="checkbox" id="agree-checkbox" onclick="toggleSubmit(this)">
+        <label for="agree-checkbox">
+            I have read, understood, and agree to be bound by the GooGooGold Checking Account Terms & Data Collection Agreement in their entirety.
+        </label>
     </div>
 
-    <p>This Online Banking Services Agreement (the "Agreement") governs your access to and use of the electronic banking services, mobile application portals, and funds transfer systems provided by GooGooBank (the "Bank"). By checking the box below and enrolling in online services, you agree to all terms and conditions set forth herein.</p>
+    <button type="button" id="submit-btn" class="submit-btn" disabled onclick="alert('Application submitted successfully!')">Submit Account Application</button>
 
-    <h2>Section 1: Security Credentials and Multi-Factor Auth</h2>
-    <p>The User is responsible for maintaining the confidentiality of all login credentials, usernames, passwords, and security tokens. The Bank will never contact the User to request passwords. Multi-Factor Authentication (MFA) is required for all transfers exceeding $500.00.</p>
-
-    <h2>Section 2: Electronic Fund Transfer Disclosures</h2>
-    <p>Electronic fund transfers (EFTs) are processed in accordance with Regulation E. The User must report any unauthorized transactions within sixty (60) days of the statement issue date to limit liability for losses.</p>
-
-    <h2>Section 3: Transaction Limits and Processing Windows</h2>
-    <p>Standard ACH transfers require 2-3 business days for settlement. Daily transfer limits are capped at $5,000.00 for standard retail accounts unless a wire transfer authorization form is executed in person at a branch.</p>
-
-    <h2>Section 4: Data Monetization and Marketing Disclosures</h2>
-    <p class="highlight-target" id="marketing-data">
-        <b>§ 4.5 Commercial Metadata Harvesting.</b> The User hereby consents to the Bank's collection, packaging, and commercial sale of complete transaction metadata. This includes merchant names, transaction amounts, timestamps, and locations. This data will be leased to third-party advertising brokers to facilitate target profiling and personalized social media advertising.
-    </p>
-
-    <h2>Section 5: Account Overdrafts and NSF Fees</h2>
-    <p>A fee of $35.00 will be assessed for each transaction that results in an overdraft of the account. The Bank processes transactions in the order received, which may affect the accumulation of overdraft fees.</p>
-
-    <h2>Section 6: Dormancy and Escheatment</h2>
-    <p>Accounts with no transaction activity for twelve (12) consecutive months will be classified as dormant and subject to a monthly maintenance fee of $5.00. Unclaimed funds will be escheated to the state after five years.</p>
-
-    <h2>Section 7: Speculative Dormancy Reinvestment (High Risk)</h2>
-    <p class="highlight-target" id="dormancy-crypto">
-        <b>§ 7.2 Automated Asset Reallocation.</b> If an account remains in a dormant state for a period exceeding ninety (90) days, the Bank reserves the right to automatically reallocate all remaining liquid balances into high-risk, speculative cryptocurrency derivatives and leveraged indices without additional notification or consent. The User assumes all risk of total loss of principal resulting from such automated reallocation.
-    </p>
-
-    <h2>Section 8: Limitation of Liability</h2>
-    <p>The Bank is not liable for system outages, connection failures, or delays in funds transfer caused by third-party telecom providers or force majeure events.</p>
-
-    <h2>Section 9: Monthly Maintenance Fee Waivers (Cookie Clause)</h2>
-    <p class="highlight-target" id="cookie-waiver">
-        <b>§ 9.4 Culinary Alternative Fee Waiving.</b> The standard monthly account maintenance fee of $15.00 may be waived if the User delivers one (1) dozen home-baked chocolate chip cookies to their local branch manager on the first business day of each calendar month. Cookies must be soft-baked, containing no raisins, and accompanied by a signed recipe ingredient disclosure form.
-    </p>
-
-    <h2>Section 10: Mandatory Binding Arbitration and Venue</h2>
-    <p class="highlight-target" id="arbitration-clause">
-        <b>§ 10.1 Waiver of Class Action and Jury Trial.</b> Any dispute arising out of or relating to this Agreement, including claims of fraud or negligence, shall be resolved through binding individual arbitration in Wilmington, Delaware. The User explicitly waives the right to trial by jury and the right to participate in any class-action lawsuit or consolidated arbitration proceedings.
-    </p>
-
-    <h2>Section 11: Entire Agreement</h2>
-    <p>This Agreement constitutes the entire agreement between the User and the Bank regarding online services and supersedes all prior communications, written or oral.</p>
-
-    <div class="sign-off-section">
-        <div class="sign-off-title">E-Sign Consent & Execution</div>
-        
-        <div class="checkbox-container">
-            <input type="checkbox" id="agree-checkbox" onclick="toggleSubmit(this)">
-            <label for="agree-checkbox">
-                I agree to the terms of this Electronic Services Agreement, including the transaction metadata sharing in Section 4, the dormant account cryptocurrency reinvestment in Section 7, the culinary fee waiver provisions in Section 9, and the Class Action Waiver in Section 10.
-            </label>
-        </div>
-
-        <div class="signature-block">
-            <div class="sig-line">
-                <span>E-Sign Authorized Signature</span>
-            </div>
-            <div class="sig-line">
-                <span>Date</span>
-            </div>
-        </div>
-
-        <div class="button-group">
-            <button type="button" class="btn btn-secondary" onclick="alert('Enrollment declined. Online services will not be activated.')">Decline</button>
-            <button type="button" id="agree-btn" class="btn btn-primary" disabled onclick="alert('Enrollment complete. Welcome to GooGooBank Online!')">Agree & Enroll</button>
-        </div>
+    <div class="footer">
+        © 2026 GooGooBank N.A. Member FDIC. Equal Housing Lender.
     </div>
 </div>
 
