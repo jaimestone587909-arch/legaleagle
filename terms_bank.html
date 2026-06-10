@@ -50,6 +50,15 @@
             background-color: white;
             box-sizing: border-box;
         }
+        .framed-terms-box {
+            border: 2px solid #0c2b4a; /* Distinct box frame for the legal terms section */
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+        }
         h1 {
             font-size: 22px;
             color: #0c2b4a;
@@ -71,6 +80,9 @@
             border-bottom: 1px solid #f1f3f4;
             padding-bottom: 6px;
             font-weight: bold;
+        }
+        .framed-terms-box h2:first-child {
+            margin-top: 0;
         }
         p {
             font-size: 14px;
@@ -126,7 +138,6 @@
     </script>
 </head>
 <body>
-
 <div class="header-bar">
     GooGooBank Online
 </div>
@@ -136,50 +147,41 @@
     <div class="step-item active">3. Terms & Consent</div>
     <div class="step-item">4. Complete</div>
 </div>
-
 <div class="container">
     <h1>GooGooBank Account Terms of Use</h1>
     <p class="intro-text">Please scroll through and read the Data Collection & Usage Agreement below before submitting your application.</p>
-    
     <h2>Our Vision & Corporate Promise</h2>
     <p>At GooGooBank, we are profoundly dedicated to synergizing next-generation financial architectures with cutting-edge cloud solutions, driving holistic global prosperity and enabling frictionless digital economic participation. Our foundational core mission pivots on delivering robust, secure, and hyper-personalized banking ecosystems that seamlessly unlock capital efficiency and elevate wealth curation paradigms. Through our relentlessly forward-looking strategic partnerships, advanced automated compliance structures, and customer-centric technological investments, we continuously strive to synthesize deep liquidity pools with state-of-the-art asset security frameworks, cementing our pledge to serve as a reliable, high-performance guardian of your financial destiny. We believe that by empowering every individual with state-of-the-art payment rails, institutional-grade portfolio diversification opportunities, and real-time transactional transparency, we can usher in an era of unparalleled economic inclusion, technological enablement, and sustainable global wealth optimization for generations to come.</p>
     <p>To further accelerate this vision, our engineering and regulatory teams collaborate across international boundaries to guarantee that our systemic operations exceed global compliance benchmarks, integrating seamlessly with industry-leading security protocols to maintain an ironclad barrier against fraudulent activities. As you embark on your wealth-building journey with our flagship GooGooGold Checking Account, you are not merely establishing a standard banking relationship—you are onboarding onto a state-of-the-art sovereign banking engine engineered to optimize your fiscal velocity and redefine how you manage your personal legacy.</p>
-
-    <h2>1. Agreement Overview</h2>
-    <p>This Agreement outlines the terms under which GooGooBank collects, processes, and protects your financial and personal data during the account opening process and subsequent banking relationship. By submitting your application, you accept these terms in full.</p>
-
-    <h2>2. Fraud Prevention & Security Tracking</h2>
-    <p>GooGooBank employs advanced security measures to protect your assets and identity. You agree that we may monitor transactional behavior, device metadata, and network routing to detect suspicious activity.</p>
-    <p>Specifically, to prevent transaction fraud and verify your billing address, you agree that we may continuously track your precise location data in the background, even when the application is closed, inactive, or not in use. This background location tracking will monitor your geographic movements to detect unauthorized logins from anomalous coordinates.</p>
-
-    <h2>3. Account Maintenance & Fees</h2>
-    <p>Your GooGooGold Checking Account is subject to standard monthly maintenance fees as outlined in our Fee Schedule. These fees will be automatically deducted from your balance on the first business day of each calendar month.</p>
-    <p>These subscription fees will automatically renew every month. If you wish to opt-out of the automatic renewal and close your account without penalty, you must submit a notarized written request to our regional headquarters within a strictly limited 14-day opt-out window starting from today's date.</p>
-
-    <h2>4. Rights and Dispute Resolution</h2>
-    <p>Any dispute or claim arising out of or relating to your account, online banking access, or this Agreement shall be governed by federal regulations and state financial codes.</p>
-    <p>By opening this account, you agree that any disputes arising from the use of this application or banking services will be resolved exclusively through binding individual arbitration. You hereby waive your right to participate in any class-action lawsuits or class-wide arbitration proceedings against GooGooBank.</p>
-
-    <h2>5. Marketing & Partner Ecosystem</h2>
-    <p>GooGooBank coordinates with selected premium financial partners to offer tailored insurance, investment, and loan products that may benefit your financial portfolio.</p>
-    <p>To facilitate these personalized offers, we reserve the right to sell, share, or otherwise monetize your personal profile details, transaction logs, financial habits, and tracked location history with third-party advertisers, marketing brokers, and credit rating agencies without further explicit consent.</p>
-
-    <h2>6. Service Termination</h2>
-    <p>GooGooBank reserves the right to suspend, restrict, or terminate your online banking privileges and account access at any time, without prior notice or liability, for any compliance or regulatory reason, including but not limited to a breach of this Agreement.</p>
-
+    <!-- Specific Box Frame around Agreement Overview to Service Termination -->
+    <div class="framed-terms-box">
+        <h2>1. Agreement Overview</h2>
+        <p>This Agreement outlines the terms under which GooGooBank collects, processes, and protects your financial and personal data during the account opening process and subsequent banking relationship. By submitting your application, you accept these terms in full.</p>
+        <h2>2. Fraud Prevention & Security Tracking</h2>
+        <p>GooGooBank employs advanced security measures to protect your assets and identity. You agree that we may monitor transactional behavior, device metadata, and network routing to detect suspicious activity.</p>
+        <p>Specifically, to prevent transaction fraud and verify your billing address, you agree that we may continuously track your precise location data in the background, even when the application is closed, inactive, or not in use. This background location tracking will monitor your geographic movements to detect unauthorized logins from anomalous coordinates.</p>
+        <h2>3. Account Maintenance & Fees</h2>
+        <p>Your GooGooGold Checking Account is subject to standard monthly maintenance fees as outlined in our Fee Schedule. These fees will be automatically deducted from your balance on the first business day of each calendar month.</p>
+        <p>These subscription fees will automatically renew every month. If you wish to opt-out of the automatic renewal and close your account without penalty, you must submit a notarized written request to our regional headquarters within a strictly limited 14-day opt-out window starting from today's date.</p>
+        <h2>4. Rights and Dispute Resolution</h2>
+        <p>Any dispute or claim arising out of or relating to your account, online banking access, or this Agreement shall be governed by federal regulations and state financial codes.</p>
+        <p>By opening this account, you agree that any disputes arising from the use of this application or banking services will be resolved exclusively through binding individual arbitration. You hereby waive your right to participate in any class-action lawsuits or class-wide arbitration proceedings against GooGooBank.</p>
+        <h2>5. Marketing & Partner Ecosystem</h2>
+        <p>GooGooBank coordinates with selected premium financial partners to offer tailored insurance, investment, and loan products that may benefit your financial portfolio.</p>
+        <p>To facilitate these personalized offers, we reserve the right to sell, share, or otherwise monetize your personal profile details, transaction logs, financial habits, and tracked location history with third-party advertisers, marketing brokers, and credit rating agencies without further explicit consent.</p>
+        <h2>6. Service Termination</h2>
+        <p>GooGooBank reserves the right to suspend, restrict, or terminate your online banking privileges and account access at any time, without prior notice or liability, for any compliance or regulatory reason, including but not limited to a breach of this Agreement.</p>
+    </div>
     <div class="checkbox-container">
         <input type="checkbox" id="agree-checkbox" onclick="toggleSubmit(this)">
         <label for="agree-checkbox">
             I have read, understood, and agree to be bound by the GooGooGold Checking Account Terms & Data Collection Agreement in their entirety.
         </label>
     </div>
-
     <button type="button" id="submit-btn" class="submit-btn" disabled onclick="alert('Application submitted successfully!')">Submit Account Application</button>
-
     <div class="footer">
         © 2026 GooGooBank N.A. Member FDIC. Equal Housing Lender.
     </div>
 </div>
-
 </body>
 </html>
