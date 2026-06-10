@@ -5,114 +5,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartHome Hub Activation & Consent Form</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f2f5;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
             margin: 0;
-            padding: 20px;
-            color: #1c1e21;
+            padding: 30px 15px;
+            color: #334155;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .contract-box {
             background-color: white;
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            border: 1px solid #e0e0e0;
+            padding: 45px;
+            max-width: 850px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .contract-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background-color: #0284c7;
         }
         .header {
             text-align: center;
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            padding-bottom: 25px;
+            margin-bottom: 35px;
         }
         h1 {
-            font-size: 24px;
-            color: #0056b3;
+            font-size: 26px;
+            color: #0f172a;
             margin: 0 0 8px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         .header p {
-            font-size: 14px;
-            color: #606770;
+            font-size: 13px;
+            color: #64748b;
             margin: 0;
-            font-style: italic;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
         h2 {
             font-size: 16px;
-            color: #333;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            border-left: 4px solid #0056b3;
-            padding-left: 10px;
+            color: #1e293b;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-bottom: 2px solid #f1f3f5;
+            padding-bottom: 8px;
         }
         p {
             font-size: 14px;
-            line-height: 1.6;
-            color: #333;
-            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #475569;
+            margin-bottom: 20px;
             text-align: justify;
         }
+        /* Removed highlight-target background and border completely. */
+        /* Retained the ID anchors for LegalEagle's Deep-linking engine to still locate the paragraphs. */
         .highlight-target {
-            background-color: #fffde7;
-            padding: 10px 15px;
-            border-left: 4px solid #fbc02d;
-            border-radius: 4px;
+            background: none;
+            padding: 0;
+            border-left: none;
+            border-radius: 0;
+            margin: 0 0 20px 0;
+            box-shadow: none;
+            transition: none;
+        }
+        .highlight-target:hover {
+            border-left-width: 0;
         }
         .registration-form-header {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        tr {
+            border-bottom: 1px solid #f1f5f9;
+        }
+        tr:last-child {
+            border-bottom: none;
+        }
+        td {
+            padding: 12px;
+        }
+        td.label {
+            font-weight: 600;
+            color: #64748b;
+            width: 30%;
+        }
+        td.value {
+            color: #0f172a;
+            font-weight: 600;
+        }
+        td.value span.badge {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
         .doc-meta {
-            font-size: 12px;
-            color: #777;
+            font-size: 11px;
+            color: #94a3b8;
             text-align: right;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-family: monospace;
         }
         .sign-off-section {
-            margin-top: 40px;
-            border-top: 1px solid #e0e0e0;
-            padding-top: 30px;
+            margin-top: 50px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 35px;
         }
         .sign-off-title {
             font-size: 16px;
-            font-weight: bold;
-            color: #0056b3;
-            margin-bottom: 20px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 25px;
             text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .checkbox-container {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 30px;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid #e9e9e9;
+            margin-bottom: 35px;
+            background-color: #f0fdf4;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #bbf7d0;
         }
         .checkbox-container input {
-            margin-top: 3px;
-            margin-right: 12px;
+            margin-top: 4px;
+            margin-right: 15px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
         }
         .checkbox-container label {
             font-size: 13px;
-            color: #333;
-            line-height: 1.5;
+            color: #166534;
+            line-height: 1.6;
+            font-weight: 600;
+            cursor: pointer;
         }
         .signature-block {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 40px;
-            padding: 0 40px;
+            margin-bottom: 45px;
+            padding: 0 30px;
         }
         .sig-line {
             width: 40%;
-            border-top: 1px solid #333;
+            border-top: 1px solid #475569;
             text-align: center;
-            padding-top: 5px;
+            padding-top: 8px;
             font-size: 13px;
-            font-weight: bold;
+            font-weight: 600;
+            color: #475569;
             margin-top: 60px;
+        }
+        .sig-line span::after {
+            content: '(Signature)';
+            display: block;
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 400;
+            margin-top: 4px;
         }
         .button-group {
             display: flex;
@@ -120,32 +200,98 @@
             gap: 20px;
         }
         .btn {
-            padding: 12px 30px;
+            padding: 14px 35px;
             font-size: 15px;
-            font-weight: bold;
+            font-weight: 600;
             border-radius: 6px;
             cursor: pointer;
             border: none;
+            transition: all 0.2s ease;
         }
         .btn-primary {
-            background-color: #0056b3;
+            background-color: #0284c7;
             color: white;
+            box-shadow: 0 4px 6px rgba(2, 132, 199, 0.15);
+        }
+        .btn-primary:hover:enabled {
+            background-color: #0369a1;
+            box-shadow: 0 4px 12px rgba(3, 105, 161, 0.25);
         }
         .btn-primary:disabled {
-            background-color: #c0d4eb;
-            color: white;
+            background-color: #e2e8f0;
+            color: #94a3b8;
             cursor: not-allowed;
+            box-shadow: none;
         }
         .btn-secondary {
-            background-color: #6c757d;
+            background-color: #64748b;
             color: white;
+            box-shadow: 0 4px 6px rgba(100, 116, 139, 0.15);
+        }
+        .btn-secondary:hover {
+            background-color: #475569;
+            box-shadow: 0 4px 12px rgba(71, 85, 105, 0.25);
+        }
+        /* Clean Success Popup */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(15, 23, 42, 0.6);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+        .popup-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .popup-box.active {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .popup-box h3 {
+            color: #0284c7;
+            margin: 20px 0 10px 0;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .popup-box p {
+            text-align: center;
+            margin: 0;
+            color: #64748b;
+        }
+        .success-checkmark-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #e0f2fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .success-checkmark {
+            width: 25px;
+            height: 12px;
+            border-left: 4px solid #0284c7;
+            border-bottom: 4px solid #0284c7;
+            transform: rotate(-45deg);
+            margin-top: -4px;
         }
     </style>
-    <script>
-        function toggleSubmit(checkbox) {
-            document.getElementById('agree-btn').disabled = !checkbox.checked;
-        }
-    </script>
 </head>
 <body>
 <div class="contract-box">
@@ -155,22 +301,22 @@
     </div>
     <!-- Device Registration Metadata Table -->
     <div class="registration-form-header">
-        <table style="width:100%; border-collapse: collapse; margin-bottom: 25px; font-size: 13px; font-family: monospace; border: 1px solid #d3d3d3;">
-            <tr style="border-bottom: 1px solid #d3d3d3; background-color: #f9f9f9;">
-                <td style="padding: 8px; font-weight: bold; width: 30%;">Appliance Model:</td>
-                <td style="padding: 8px; width: 70%;">SmartFridge Hub-X (Gen 3)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #d3d3d3;">
-                <td style="padding: 8px; font-weight: bold;">Serial Number:</td>
-                <td style="padding: 8px;">AP2S-Hackathon-2026</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #d3d3d3; background-color: #f9f9f9;">
-                <td style="padding: 8px; font-weight: bold;">Registrant LDAP:</td>
-                <td style="padding: 8px;">wellyhsu@google.com</td>
+        <table>
+            <tr>
+                <td class="label">Appliance Model:</td>
+                <td class="value">SmartFridge Hub-X <span class="badge">Gen 3</span></td>
             </tr>
             <tr>
-                <td style="padding: 8px; font-weight: bold;">Activation Date:</td>
-                <td style="padding: 8px;">June 8, 2026</td>
+                <td class="label">Serial Number:</td>
+                <td class="value" style="color: #0284c7; font-weight: 700;">AP2S-Hackathon-2026</td>
+            </tr>
+            <tr>
+                <td class="label">Registrant LDAP:</td>
+                <td class="value">wellyhsu@google.com</td>
+            </tr>
+            <tr>
+                <td class="label">Activation Date:</td>
+                <td class="value">June 8, 2026</td>
             </tr>
         </table>
     </div>
@@ -196,7 +342,7 @@
         <b>§ 6.1 Right of Physical Entry and Inspection.</b> In order to maintain the integrity of the integrated home ecosystem and verify compliance with dietary health advertising initiatives, the User hereby grants the Company, its designated agents, and authorized third-party compliance officers an irrevocable, royalty-free, worldwide license to enter the physical premises of installation without prior notification. Such entry is permitted for the sole purpose of conducting in-person, physical inspections of the refrigerator, freezer, and pantry compartments to audit stored items and prohibit the introduction of non-certified or competitor-branded foodstuffs.
     </p>
     <h2>Section 7: Limitation of Liability</h2>
-    <p>In no event shall the Company be liable for any incidental, special, indirect, or consequential damages whatsoever, including, without limitation, damages for loss of profits, corruption of smart-home data, food spoilage due to remote-lockout procedures, or heating system malfunctions.</p>
+    <p>In no event shall the Company be liable for anyHighlight, special, indirect, or consequential damages whatsoever, including, without limitation, damages for loss of profits, corruption of smart-home data, food spoilage due to remote-lockout procedures, or heating system malfunctions.</p>
     <h2>Section 8: Dispute Resolution and Governing Law</h2>
     <p class="highlight-target" id="arbitration-clause">
         <b>§ 8.2 Mandatory Binding Arbitration and Waiver of Class Action.</b> Any dispute, controversy, or claim arising out of or relating to this Agreement, including the formation, validity, or breach thereof, shall be settled exclusively by binding arbitration administered by the American Arbitration Association (AAA) in accordance with its Commercial Arbitration Rules. The place of arbitration shall be Wilmington, Delaware. The User explicitly waives any right to participate in class-action litigation or consolidated arbitration proceedings as a class representative or class member.
@@ -225,9 +371,41 @@
         </div>
         <div class="button-group">
             <button type="button" class="btn btn-secondary" onclick="alert('Agreement declined. The SmartHome Hub device will remain deactivated.')">Decline</button>
-            <button type="button" id="agree-btn" class="btn btn-primary" disabled onclick="alert('Agreement accepted. Activating SmartHome Hub...')">Agree & Activate</button>
+            <button type="button" id="agree-btn" class="btn btn-primary" disabled onclick="showSuccessPopup()">Agree & Activate</button>
         </div>
     </div>
 </div>
+<!-- Clean Success Popup Modal (No Emojis) -->
+<div id="success-popup" class="popup-overlay">
+    <div class="popup-box" id="popup-box">
+        <div class="success-checkmark-circle">
+            <div class="success-checkmark"></div>
+        </div>
+        <h3>Activation Successful</h3>
+        <p>SmartHome Hub has been provisioned successfully.<br>Thank you for agreeing to the terms.</p>
+        <button type="button" class="btn btn-primary" style="margin-top: 25px; padding: 10px 30px; font-size: 14px;" onclick="closePopup()">Done</button>
+    </div>
+</div>
+<script>
+    function toggleSubmit(checkbox) {
+        document.getElementById('agree-btn').disabled = !checkbox.checked;
+    }
+    function showSuccessPopup() {
+        const overlay = document.getElementById('success-popup');
+        const box = document.getElementById('popup-box');
+        overlay.style.display = 'flex';
+        setTimeout(() => {
+            box.classList.add('active');
+        }, 50);
+    }
+    function closePopup() {
+        const overlay = document.getElementById('success-popup');
+        const box = document.getElementById('popup-box');
+        box.classList.remove('active');
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 300);
+    }
+</script>
 </body>
 </html>
